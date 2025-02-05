@@ -5,6 +5,8 @@ import 'package:dice_roller/core/models/dice.dart';
 import 'package:flutter/material.dart';
 
 class AddAtackPage extends StatefulWidget {
+  const AddAtackPage({super.key});
+
   @override
   State<AddAtackPage> createState() => _AddAtackPageState();
 }

@@ -1,3 +1,5 @@
+import 'dart:math';
+
 enum Dice {
   d3(3),
   d4(4),
@@ -9,5 +11,11 @@ enum Dice {
   d100(100);
 
   const Dice(this.value);
-  final num value;
+  final int value;
+
+  int roll() => 1 + Random().nextInt(value);
+
+  factory Dice.fromInt(int value) {
+    return Dice.values.firstWhere((dice) => dice.value == value);
+  }
 }
